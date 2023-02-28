@@ -1,7 +1,7 @@
 package com.taibov.kursovaya;
 
 import com.taibov.kursovaya.entities.*;
-import com.zubkov.kursovaya.entities.*;
+import com.taibov.kursovaya.entities.*;
 import com.taibov.kursovaya.repositories.AddressRepo;
 import com.taibov.kursovaya.repositories.ClientRepo;
 import com.taibov.kursovaya.repositories.MealRepo;

@@ -1,6 +1,6 @@
 /* =================================
 ------------------------------------
-  Pulse - Restaurant HTML Template
+  Pulse - Used furnituret HTML Template
   Version: 1.0
  ------------------------------------ 
  ====================================*/
@@ -497,7 +497,7 @@ ol {
 .main-menu li a {
 	display: inline-block;
 	margin-left: 50px;
-	color: #fff;
+	color: red;
 	padding: 10px 5px;
 	-webkit-transition: all 0.4s;
 	-o-transition: all 0.4s;
