@@ -66,7 +66,7 @@ $(window).on('load', function() {
 	});
 	function currentHSnumber() {
 		$('.hero-slider .owl-dots').clone().appendTo('.hero-slider');
-		$('.hero-slider .owl-dots:last-child').addClass('owl-dots-number');
+		// $('.hero-slider .owl-dots:last-child').addClass('owl-dots-number');
 		var av = $('.owl-dots-number').innerHeight() / 2;
 		$('.owl-dots-number').css('marginTop', -av);
 	}
