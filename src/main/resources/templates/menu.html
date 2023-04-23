@@ -71,7 +71,7 @@
 				<!-- single tab content -->
 				<div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
 					<div class="row menu-dark">
-						<div class="col-lg-6 col-lg-6my" th:each="meal : ${mealsbreakfast}" th:href="${meal.name}" onclick="document.getElementById(this.getAttribute('href')).submit();">
+						<div class="col-lg-6 col-lg-6my" th:each="meal : ${mealstables}" th:href="${meal.name}" onclick="document.getElementById(this.getAttribute('href')).submit();">
 							<form th:id="${meal.name}" method="post">
 								<div class="menu-item">
 									<div class="addbutton">
@@ -91,7 +91,7 @@
 				<!-- single tab content -->
 				<div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-2">
 						<div class="row menu-dark">
-							<div class="col-lg-6 col-lg-6my" th:each="meal : ${mealsbrunch}" th:href="${meal.name}" onclick="document.getElementById(this.getAttribute('href')).submit();">
+							<div class="col-lg-6 col-lg-6my" th:each="meal : ${mealschairs}" th:href="${meal.name}" onclick="document.getElementById(this.getAttribute('href')).submit();">
 								<form th:id="${meal.name}" method="post">
 									<div class="menu-item">
 										<div class="addbutton">
@@ -111,7 +111,7 @@
 				<!-- single tab content -->
 				<div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-3">
 					<div class="row menu-dark">
-						<div class="col-lg-6 col-lg-6my" th:each="meal : ${mealslunch}" th:href="${meal.name}" onclick="document.getElementById(this.getAttribute('href')).submit();">
+						<div class="col-lg-6 col-lg-6my" th:each="meal : ${mealssofas}" th:href="${meal.name}" onclick="document.getElementById(this.getAttribute('href')).submit();">
 							<form th:id="${meal.name}" method="post">
 								<div class="menu-item">
 									<div class="addbutton">
@@ -131,7 +131,7 @@
 				<!-- single tab content -->
 				<div class="tab-pane fade" id="tab-4" role="tabpanel" aria-labelledby="tab-4">
 					<div class="row menu-dark">
-						<div class="col-lg-6 col-lg-6my" th:each="meal : ${mealsdinner}" th:href="${meal.name}" onclick="document.getElementById(this.getAttribute('href')).submit();">
+						<div class="col-lg-6 col-lg-6my" th:each="meal : ${mealsnightstands}" th:href="${meal.name}" onclick="document.getElementById(this.getAttribute('href')).submit();">
 							<form th:id="${meal.name}" method="post">
 								<div class="menu-item">
 									<div class="addbutton">

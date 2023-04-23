@@ -125,14 +125,14 @@ public class HomePageController
 
     @GetMapping("menu")
     public String menuGet(Model model){
-        List<Meal> mealsbreakfast = mealRepo.findMealsByMealtime(MealTime.BREAKFAST);
-        model.addAttribute("mealsbreakfast", mealsbreakfast);
-        List<Meal> mealsbrunch = mealRepo.findMealsByMealtime(MealTime.BRUNCH);
-        model.addAttribute("mealsbrunch", mealsbrunch);
-        List<Meal> mealslunch = mealRepo.findMealsByMealtime(MealTime.LUNCH);
-        model.addAttribute("mealslunch", mealslunch);
-        List<Meal> mealsdinner = mealRepo.findMealsByMealtime(MealTime.DINNER);
-        model.addAttribute("mealsdinner", mealsdinner);
+        List<Meal> mealstables = mealRepo.findMealsByMealtime(MealTime.TABLES);
+        model.addAttribute("mealstables", mealstables);
+        List<Meal> mealschairs = mealRepo.findMealsByMealtime(MealTime.CHAIRS);
+        model.addAttribute("mealschairs", mealschairs);
+        List<Meal> mealssofas = mealRepo.findMealsByMealtime(MealTime.SOFAS);
+        model.addAttribute("mealssofas", mealssofas);
+        List<Meal> mealsnightstands = mealRepo.findMealsByMealtime(MealTime.NIGHTSTANDS);
+        model.addAttribute("mealsnightstands", mealsnightstands);
         return "menu";
     }
 

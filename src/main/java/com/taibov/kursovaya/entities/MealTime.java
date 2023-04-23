@@ -1,8 +1,8 @@
 package com.taibov.kursovaya.entities;
 
 public enum MealTime {
-    BREAKFAST,
-    BRUNCH,
-    LUNCH,
-    DINNER
+    TABLES,
+    CHAIRS,
+    SOFAS,
+    NIGHTSTANDS
 }

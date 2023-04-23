@@ -37,7 +37,7 @@ class KursovayaApplicationTests {
 
 	@Test
 	void CreateClient(){
-		Client client = new Client("nikita@wot.ru", "111");
+		Client client = new Client("pasha@wot.ru", "111");
 		clientRepo.saveAndFlush(client);
 	}
 
@@ -50,7 +50,7 @@ class KursovayaApplicationTests {
 	@Test
 	void SetAddress(){
 		Client client = clientRepo.findClientById(54);
-		Address address = new Address("Moscow", "Samuila Marshaka", "14", "78");
+		Address address = new Address("Moscow", "Samuila Marshaka", "15", "78");
 		client.setFk_address(address);
 		clientRepo.saveAndFlush(client);
 	}
@@ -66,7 +66,7 @@ class KursovayaApplicationTests {
 	void SetAddressBySession(){
 		Client client = clientRepo.findClientById(54);
 		System.out.println(client);
-		Address address = new Address("Moscow", "Samuila Marshaka", "14", "78");
+		Address address = new Address("Moscow", "Samuila Marshaka", "15", "78");
 		client.setFk_address(address);
 		Main.DoInSession(session -> {
 			session.update(client);
@@ -83,19 +83,19 @@ class KursovayaApplicationTests {
 
 	@Test
 	void GetMeals(){
-		System.out.println(mealRepo.findMealsByMealtime(MealTime.BREAKFAST));
+		System.out.println(mealRepo.findMealsByMealtime(MealTime.TABLES));
 	}
 
 	@Test
 	void AddMeal(){
-		mealRepo.saveAndFlush(new Meal("Milk", 300, "Milk", MealTime.DINNER));
-		mealRepo.saveAndFlush(new Meal("Water", 100, "Water", MealTime.DINNER));
-		mealRepo.saveAndFlush(new Meal("Spagetti", 100, "From Italia", MealTime.DINNER));
+		mealRepo.saveAndFlush(new Meal("Компактный стол-книжка тумба с ящиками Тумбо Венге", 7999, "Страна изготовитель: Россия", MealTime.NIGHTSTANDS));
+		mealRepo.saveAndFlush(new Meal("Кухонный стол Франц 2 Грецкий орех / Мария Ноче", 14999, "Страна изготовитель: Россия", MealTime.NIGHTSTANDS));
+		mealRepo.saveAndFlush(new Meal("Кухонный стол Имс Белый 800 мм", 6990, "Страна изготовитель: Россия", MealTime.NIGHTSTANDS));
 	}
 
 	@Test
 	void testNameThyme(){
-		String name = "hleb";
+		String name = "Кухонный стол Франц 2 Грецкий орех / Мария Ноче";
 		System.out.println("'" + name + "'");
 		System.out.println( name );
 	}
