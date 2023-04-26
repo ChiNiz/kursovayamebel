@@ -2,6 +2,104 @@
 <html lang="zxx" xmlns:th="http://www.thymeleaf.org">
 <head th:insert="templateforall :: head"></head>
 <body>
+<style>
+	* {
+		box-sizing: border-box;
+	}
+	.product-item {
+		width: 300px;
+		margin: 0 auto;
+		padding: 10px 10px 5px 10px;
+		border: 1px solid #eee;
+		background: white;
+		font-family: "Open Sans";
+		overflow: hidden;
+		transition: .4s linear;
+	}
+	.product-img {
+		transition: 1s ease-in-out;
+	}
+	.product-img:hover {
+		transform: scale(1.1);
+	}
+	.product-img img {
+		display: block;
+		width: 100%;
+	}
+	.product-list {
+		margin-top: 15px;
+	}
+	.product-list h3 {
+		font-weight: 700;
+		color: #39404B;
+		margin: 0;
+		text-transform: uppercase;
+		font-size: 14px;
+		line-height: 2;
+	}
+	.price {
+		color: #E34D38;
+		display: block;
+		margin-bottom: 12px;
+	}
+	.stars {
+		height: 14px;
+		line-height: 14px;
+		margin: 7px 0;
+	}
+	.stars:before {
+		content: "\f005\f005\f005\f005\f005";
+		color: #EFB71C;
+		font-size: 14px;
+		font-family: FontAwesome;
+	}
+	.actions {
+		border-top: 1px solid #eee;
+		padding-top: 4px;
+		font-size: 13px;
+		height: 30px;
+		line-height: 30px;
+	}
+	.actions:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	.add-to-cart, .add-to-links {
+		float: left;
+	}
+	.cart-button {
+		text-decoration: none;
+		color: #8C877C;
+		padding-right: 20px;
+		border-right: 1px solid #ddd;
+		transition: .4s linear;
+	}
+	.cart-button:before {
+		content: "\f07a";
+		font-family: FontAwesome;
+		margin-right: 10px;
+	}
+	.add-to-cart:hover .cart-button, .wishlist:hover, .compare:hover {
+		color: #E34D38;
+	}
+	.wishlist, .compare {
+		color: #8C877C;
+		padding-left: 20px;
+		transition: .4s linear;
+	}
+	.wishlist:after, .compare:after {
+		display: inline-block;
+		font-family: FontAwesome;
+		font-size: 13px;
+	}
+	.wishlist:after {
+		content: "\f004";
+	}
+	.compare:after {
+		content: "\f079";
+	}
+</style>
 	<!-- Page Preloder -->
 	<div id="preloder">
 		<div class="loader"></div>
@@ -16,26 +114,360 @@
 	<section class="page-top-info set-bg" data-setbg="img/page-top-bg/1.jpg">
 		<div class="ptf-center">
 			<div class="container">
-				<h2>About us</h2>
+				<h2>Products</h2>
 			</div>
 		</div>
 	</section>
 	<!-- Page info section end -->
 
 
-	<!-- Intro section -->
+	<!-- Tovars section -->
 	<section class="inter-section spad">
 		<div class="container">
+			<!-- Tovars info -->
 			<div class="section-title">
-				<h2>About us</h2>
+				<h2>Tables</h2>
 			</div>
 			<div class="row">
+				<!-- -->
 				<div class="col-md-6">
-					<p>Our company specializes in the sale of high-quality used furniture at affordable prices. We believe that everyone should have access to stylish and functional furniture without having to break the bank. That's why we carefully curate our inventory to offer a wide variety of items, from sofas and beds to dining sets and office furniture.</p>
+					<div class="product-item">
+						<div class="product-img">
+							<a href="menu">
+								<img src="img/table1.jpg">
+							</a>
+						</div>
+						<div class="product-list">
+							<h3>Компактный стол-книжка тумба с ящиками Тумбо Венге</h3>
+							<div class="stars"></div>
+							<span class="price">₽ 7999</span>
+							<div class="actions">
+								<div class="add-to-cart">
+									<a href="menu" class="cart-button">Купить</a>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
+				<!-- -->
 				<div class="col-md-6">
-					<p>We take pride in our commitment to sustainability and eco-friendliness. By giving pre-owned furniture a second life, we are helping to reduce waste and promote a more sustainable future. All of our items are thoroughly inspected and cleaned before they go on sale, so you can be sure you're getting a great deal on a piece of furniture that's both stylish and durable. Plus, our knowledgeable staff is always on hand to answer any questions you may have and help you find the perfect piece for your needs. Come visit us today and see why we're the go-to destination for quality used furniture.</p>
+					<div class="product-item">
+						<div class="product-img">
+							<a href="menu">
+								<img src="img/table2.jpg">
+							</a>
+						</div>
+						<div class="product-list">
+							<h3>Кухонный стол Имс Белый 800 мм</h3>
+							<div class="stars"></div>
+							<span class="price">₽ 6990</span>
+							<div class="actions">
+								<div class="add-to-cart">
+									<a href="menu" class="cart-button">Купить</a>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
+				<!-- -->
+				<div class="col-md-6">
+					<div class="product-item">
+						<div class="product-img">
+							<a href="menu">
+								<img src="img/table3.jpg">
+							</a>
+						</div>
+						<div class="product-list">
+							<h3>Кухонный стол Франц 2 Грецкий орех / Мария Ноче</h3>
+							<div class="stars"></div>
+							<span class="price">₽ 14999</span>
+							<div class="actions">
+								<div class="add-to-cart">
+									<a href="menu" class="cart-button">Купить</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- -->
+				<div class="col-md-6">
+					<div class="product-item">
+						<div class="product-img">
+							<a href="menu">
+								<img src="img/table4.jpg">
+							</a>
+						</div>
+						<div class="product-list">
+							<h3>Кухонный стол Траверси Белый</h3>
+							<div class="stars"></div>
+							<span class="price">₽ 2990</span>
+							<div class="actions">
+								<div class="add-to-cart">
+									<a href="menu" class="cart-button">Купить</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- -->
+			</div>
+			<div class="section-title">
+				<h2>Chairs</h2>
+			</div>
+			<div class="row">
+				<!-- -->
+				<div class="col-md-6">
+					<div class="product-item">
+						<div class="product-img">
+							<a href="menu">
+								<img src="img/chair1.jpg">
+							</a>
+						</div>
+						<div class="product-list">
+							<h3>Стул Флекс Бежевый, велюр / Черный, металл</h3>
+							<div class="stars"></div>
+							<span class="price">₽ 6990</span>
+							<div class="actions">
+								<div class="add-to-cart">
+									<a href="menu" class="cart-button">Купить</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- -->
+				<div class="col-md-6">
+					<div class="product-item">
+						<div class="product-img">
+							<a href="menu">
+								<img src="img/chair2.jpg">
+							</a>
+						</div>
+						<div class="product-list">
+							<h3>Классический стул Гермес Темный орех</h3>
+							<div class="stars"></div>
+							<span class="price">₽ 4150</span>
+							<div class="actions">
+								<div class="add-to-cart">
+									<a href="menu" class="cart-button">Купить</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- -->
+				<div class="col-md-6">
+					<div class="product-item">
+						<div class="product-img">
+							<a href="menu">
+								<img src="img/chair3.jpg">
+							</a>
+						</div>
+						<div class="product-list">
+							<h3>Стул Франкфурт, экокожа</h3>
+							<div class="stars"></div>
+							<span class="price">₽ 3990</span>
+							<div class="actions">
+								<div class="add-to-cart">
+									<a href="menu" class="cart-button">Купить</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- -->
+				<div class="col-md-6">
+					<div class="product-item">
+						<div class="product-img">
+							<a href="menu">
+								<img src="img/chair4.jpg">
+							</a>
+						</div>
+						<div class="product-list">
+							<h3>Стул Имс Пэчворк Пэчворк, шенилл</h3>
+							<div class="stars"></div>
+							<span class="price">₽ 4490</span>
+							<div class="actions">
+								<div class="add-to-cart">
+									<a href="menu" class="cart-button">Купить</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- -->
+			</div>
+			<div class="section-title">
+				<h2>Sofas</h2>
+			</div>
+			<div class="row">
+				<!-- -->
+				<div class="col-md-6">
+					<div class="product-item">
+						<div class="product-img">
+							<a href="menu">
+								<img src="img/sofa1.jpg">
+							</a>
+						</div>
+						<div class="product-list">
+							<h3>Прямой диван Франческо Бежевый</h3>
+							<div class="stars"></div>
+							<span class="price">₽ 37990</span>
+							<div class="actions">
+								<div class="add-to-cart">
+									<a href="menu" class="cart-button">Купить</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- -->
+				<div class="col-md-6">
+					<div class="product-item">
+						<div class="product-img">
+							<a href="menu">
+								<img src="img/sofa2.jpg">
+							</a>
+						</div>
+						<div class="product-list">
+							<h3>Прямой диван Дени Серый</h3>
+							<div class="stars"></div>
+							<span class="price">₽ 7990</span>
+							<div class="actions">
+								<div class="add-to-cart">
+									<a href="menu" class="cart-button">Купить</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- -->
+				<div class="col-md-6">
+					<div class="product-item">
+						<div class="product-img">
+							<a href="menu">
+								<img src="img/sofa3.jpg">
+							</a>
+						</div>
+						<div class="product-list">
+							<h3>Прямой диван Парма Горчичный</h3>
+							<div class="stars"></div>
+							<span class="price">₽ 12990</span>
+							<div class="actions">
+								<div class="add-to-cart">
+									<a href="menu" class="cart-button">Купить</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- -->
+				<div class="col-md-6">
+					<div class="product-item">
+						<div class="product-img">
+							<a href="menu">
+								<img src="img/sofa4.jpg">
+							</a>
+						</div>
+						<div class="product-list">
+							<h3>Прямой диван Мэдисон Серый принт</h3>
+							<div class="stars"></div>
+							<span class="price">₽ 15590</span>
+							<div class="actions">
+								<div class="add-to-cart">
+									<a href="menu" class="cart-button">Купить</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- -->
+			</div>
+			<div class="section-title">
+				<h2>Nightstands</h2>
+			</div>
+			<div class="row">
+				<!-- -->
+				<div class="col-md-6">
+					<div class="product-item">
+						<div class="product-img">
+							<a href="menu">
+								<img src="img/nig1.jpg">
+							</a>
+						</div>
+						<div class="product-list">
+							<h3>Тумба под телевизор Фанвик Белый</h3>
+							<div class="stars"></div>
+							<span class="price">₽ 5790</span>
+							<div class="actions">
+								<div class="add-to-cart">
+									<a href="menu" class="cart-button">Купить</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- -->
+				<div class="col-md-6">
+					<div class="product-item">
+						<div class="product-img">
+							<a href="menu">
+								<img src="img/nig2.jpg">
+							</a>
+						</div>
+						<div class="product-list">
+							<h3>Обувница Эва 2 Дуб Сонома светлый</h3>
+							<div class="stars"></div>
+							<span class="price">₽ 2000</span>
+							<div class="actions">
+								<div class="add-to-cart">
+									<a href="menu" class="cart-button">Купить</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- -->
+				<div class="col-md-6">
+					<div class="product-item">
+						<div class="product-img">
+							<a href="menu">
+								<img src="img/nig3.jpg">
+							</a>
+						</div>
+						<div class="product-list">
+							<h3>Обувница Белладжио Дуб Сонома</h3>
+							<div class="stars"></div>
+							<span class="price">₽ 1990</span>
+							<div class="actions">
+								<div class="add-to-cart">
+									<a href="menu" class="cart-button">Купить</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- -->
+				<div class="col-md-6">
+					<div class="product-item">
+						<div class="product-img">
+							<a href="menu">
+								<img src="img/nig4.jpg">
+							</a>
+						</div>
+						<div class="product-list">
+							<h3>Стол-книжка Глория Дуб Сонома</h3>
+							<div class="stars"></div>
+							<span class="price">₽ 6290</span>
+							<div class="actions">
+								<div class="add-to-cart">
+									<a href="menu" class="cart-button">Купить</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- -->
 			</div>
 		</div>
 	</section>
