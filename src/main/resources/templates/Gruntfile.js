@@ -42,7 +42,6 @@ module.exports = function(grunt){
                     'build/home.html',
                     'build/about.html',
                     'build/menu.html',
-                    'build/blog.html',
                     'build/contact.html',
                     'build/element.html',
                 ]
