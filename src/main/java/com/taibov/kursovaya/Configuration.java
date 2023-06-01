@@ -13,7 +13,7 @@ public class Configuration
     public DataSource datasource() {
         return DataSourceBuilder.create()
                 .driverClassName("org.postgresql.Driver")
-                .url("jdbc:postgresql://localhost:5432/mebel")
+                .url("jdbc:postgresql://db/mebel")
                 .username("postgres")
                 .password("Fnsrnjnfrjq123")
                 .build();
